@@ -122,12 +122,20 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="SQLite.Net-PCL">
+      <Version>3.1.1</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\HHPhillyApp\HHPhillyApp.csproj">
-      <Project>{AC48EBFE-D338-4F57-9F5F-ACF798632B2B}</Project>
+      <Project>{CECBC9E4-6072-4EC8-BE7F-B029A53E7CF1}</Project>
       <Name>HHPhillyApp</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\..\..\..\..\Downloads\HoursTest.db.sqbpro">
+      <Link>Resources\HoursTest.db.sqbpro</Link>
+    </BundleResource>
   </ItemGroup>
 </Project>
