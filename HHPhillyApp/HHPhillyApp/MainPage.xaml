@@ -6,11 +6,34 @@
              mc:Ignorable="d"
              x:Class="HHPhillyApp.MainPage">
 
+    <!--<RelativeLayout>
+        <Image Source="love.jpg" Opacity="0.3"
+                RelativeLayout.WidthConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                RelativeLayout.HeightConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
+        <Grid RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}">
+
+            <Label Text="Hello world from XAML" VerticalOptions="Center"
+         HorizontalOptions="Center" FontSize="30"/>
+        </Grid>
+    </RelativeLayout>-->
     <StackLayout>
+
+        <Image Source="love.jpg" Opacity="0.3"></Image>
         <!-- Place new controls here -->
-        <Label Text="Welcome to HHPhilly!" 
+        <Label
+            x:Name="title"
+            Text="HHPhilly"
+               Margin="10, 25, 0, 0"
+               FontSize="Header"
            HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+           VerticalOptions="CenterAndExpand"/>
+            <!--Style=" ={x:StaticResource Key=FontNormal}"-->
+        
     </StackLayout>
 
 </ContentPage>

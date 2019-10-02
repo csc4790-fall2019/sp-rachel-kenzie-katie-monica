@@ -65,8 +65,12 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <BundleResource Include="Resources\IndieFlower-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
       <Visible>false</Visible>
@@ -122,18 +126,15 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
-    <PackageReference Include="SQLite.Net-PCL">
-      <Version>3.1.1</Version>
-    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\HHPhillyApp\HHPhillyApp.csproj">
-      <Project>{CECBC9E4-6072-4EC8-BE7F-B029A53E7CF1}</Project>
+      <Project>{AC48EBFE-D338-4F57-9F5F-ACF798632B2B}</Project>
       <Name>HHPhillyApp</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\HoursTest.db.sqbpro" />
+    <BundleResource Include="Resources\love.jpeg" />
   </ItemGroup>
 </Project>

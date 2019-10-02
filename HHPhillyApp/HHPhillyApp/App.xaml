@@ -6,6 +6,17 @@
              mc:Ignorable="d"
              x:Class="HHPhillyApp.App">
     <Application.Resources>
+        <ResourceDictionary>
 
+            <!-- FONTS-->
+            <OnPlatform x:TypeArguments="Font" x:Key="FontNormal">
+                <On Platform="macOS" Value="Indie Flower-Regular, 15" />
+                <On Platform="WPF" Value="./Fonts/Indie Flower-Regular.ttf#Indie Flower-Regular, 15" />
+                <On Platform="Android" Value="Indie Flower-Regular.ttf#Indie Flower-Regular, 15" />
+            </OnPlatform>
+
+
+
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
