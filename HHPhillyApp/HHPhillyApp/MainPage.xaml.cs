@@ -16,6 +16,7 @@ namespace HHPhillyApp
         public MainPage()
         {
             InitializeComponent();
+            
         }
     }
 }
