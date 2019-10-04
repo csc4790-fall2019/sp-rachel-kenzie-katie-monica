@@ -66,6 +66,7 @@
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <BundleResource Include="Resources\IndieFlower-Regular.ttf" />
+    <BundleResource Include="Resources\HoursTest.db.sqbpro" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\Contents.json">
@@ -130,7 +131,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\HHPhillyApp\HHPhillyApp.csproj">
-      <Project>{AC48EBFE-D338-4F57-9F5F-ACF798632B2B}</Project>
+      <Project>{CECBC9E4-6072-4EC8-BE7F-B029A53E7CF1}</Project>
       <Name>HHPhillyApp</Name>
     </ProjectReference>
   </ItemGroup>
