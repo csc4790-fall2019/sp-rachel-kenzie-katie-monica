@@ -67,6 +67,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <BundleResource Include="Resources\indieflowerregular.ttf" />
 	<BundleResource Include="Resources\HoursTest.db.sqbpro" />
+	<BundleResource Include="Resources\HHPhilly.db" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Images.imageset\Contents.json">
