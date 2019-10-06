@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -8,7 +9,6 @@ namespace HHPhillyApp
     public partial class App : Application
     {
         public static string FolderPath { get; internal set; }
-
         public App()
         {
             InitializeComponent();

@@ -67,7 +67,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <BundleResource Include="Resources\indieflowerregular.ttf" />
 	<BundleResource Include="Resources\HoursTest.db.sqbpro" />
-	<BundleResource Include="Resources\HHPhilly.db" />
+	<BundleResource Include="Resources\Resources.db" />
+	<Compile Include="SQLiteiPhone.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Images.imageset\Contents.json">
