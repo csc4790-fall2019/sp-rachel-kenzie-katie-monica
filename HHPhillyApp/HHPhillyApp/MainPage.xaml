@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             BackgroundImage="lovephilly.jpg"
              mc:Ignorable="d"
              x:Class="HHPhillyApp.MainPage">
 
@@ -22,17 +23,21 @@
         </Grid>
     </RelativeLayout>-->
     <StackLayout Margin="20,35,20,25">
-        <Label Text="Start"
-           HorizontalOptions="Start"
-           BackgroundColor="Gray" />
-        <Label Text="Center"
+
+        <Image x:Name="backgroundimg"
+               
+               />
+        <Label
+            x:Name="title"
+            Text="HHPhilly"
+               Margin="10, 25, 0, 0"
+               FontSize="Header"
            HorizontalOptions="Center"
-           BackgroundColor="Gray" />
-        <Label Text="End"
-           HorizontalOptions="End"
-           BackgroundColor="Gray" />
-        <Image Source="Images"
-               WidthRequest="{OnPlatform iOS=300, Android=250}" />
+           VerticalOptions="CenterAndExpand"/>
+
+    <!--    <Button Text="Go!"
+        Clicked="OnButtonClicked" VerticalOptions="CenterAndExpand" />
+-->
     </StackLayout>
   
         <!-- Place new controls here -->

@@ -66,9 +66,9 @@
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <BundleResource Include="Resources\indieflowerregular.ttf" />
-	<BundleResource Include="Resources\HoursTest.db.sqbpro" />
-	<BundleResource Include="Resources\Resources.db" />
-	<Compile Include="SQLiteiPhone.cs" />
+    <BundleResource Include="Resources\HoursTest.db.sqbpro" />
+    <BundleResource Include="Resources\Resources.db" />
+    <Compile Include="SQLiteiPhone.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Images.imageset\Contents.json">
@@ -145,5 +145,8 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\love.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lovephilly.jpg" />
   </ItemGroup>
 </Project>

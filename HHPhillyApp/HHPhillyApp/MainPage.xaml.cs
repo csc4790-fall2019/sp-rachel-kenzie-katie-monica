@@ -17,6 +17,16 @@ namespace HHPhillyApp
         {
             InitializeComponent();
             
+            backgroundimg.Source = ImageSource.FromResource("HHPhillyApp.Resources.love.png");
+
+
+        }
+
+        int count = 0;
+
+        public void OnButtonClicked(object sender, EventArgs args)
+        {
+            count++;
         }
     }
 }
