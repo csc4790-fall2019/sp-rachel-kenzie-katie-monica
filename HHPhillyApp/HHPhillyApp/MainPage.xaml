@@ -22,22 +22,27 @@
          HorizontalOptions="Center" FontSize="30"/>
         </Grid>
     </RelativeLayout>-->
-    <StackLayout Margin="20,35,20,25">
+    <StackLayout >
 
         <Image x:Name="backgroundimg"
-               
                />
         <Label
             x:Name="title"
             Text="HHPhilly"
-               Margin="10, 25, 0, 0"
-               FontSize="Header"
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand"/>
+            VerticalOptions="Center"
+            Margin="10, 0, 0, 20"
+            FontSize="Header"
+            FontAttributes="Bold"
+            TextColor="White"
+            HorizontalOptions="Center"
+            />
 
-    <!--    <Button Text="Go!"
-        Clicked="OnButtonClicked" VerticalOptions="CenterAndExpand" />
--->
+        <Button 
+            Text="Go!"
+            Clicked="OnButtonClicked" 
+            VerticalOptions="End"
+            Margin="0, 20, 0, 0"/>
+        
     </StackLayout>
   
         <!-- Place new controls here -->
