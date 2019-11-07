@@ -4,12 +4,11 @@
              x:Class="HHPhillyApp.NotesPage"
              Title="Notes">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="+"
-                     Clicked="OnNoteAddedClicked" />
+        
     </ContentPage.ToolbarItems>
     <ListView x:Name="listView"
               Margin="20"
-              ItemSelected="OnListViewItemSelected">
+              >
         <ListView.ItemTemplate>
             <DataTemplate>
                 <TextCell Text="{Binding Text}"

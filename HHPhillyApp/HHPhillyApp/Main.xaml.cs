@@ -11,22 +11,17 @@ namespace HHPhillyApp
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(false)]
-    public partial class MainPage : ContentPage
+    public partial class Main : ContentPage
     {
-        public MainPage()
+        public Main()
         {
             InitializeComponent();
-            
-            backgroundimg.Source = ImageSource.FromResource("HHPhillyApp.Resources.love.png");
-
 
         }
 
-        int count = 0;
-
-        public void OnButtonClicked(object sender, EventArgs args)
+        async void NavigateButton_OnClicked(object sender, EventArgs e)
         {
-            count++;
+            await Navigation.PushAsync(new EntryPage());
         }
     }
 }

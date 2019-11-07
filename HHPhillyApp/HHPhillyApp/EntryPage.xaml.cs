@@ -1,10 +1,10 @@
-﻿using System;
+﻿using HHPhillyApp;
+using HHPhillyApp.Models;
+using System;
 using System.IO;
 using Xamarin.Forms;
-using HHPhillyApp.Models;
-using HHPhillyApp;
 
-namespace HHPHillyApp
+namespace HHPhillyApp
 {
     public partial class EntryPage : ContentPage
     {
@@ -13,40 +13,10 @@ namespace HHPHillyApp
             InitializeComponent();
         }
 
-        private void InitializeComponent()
+        async void OnSaveButtonClicked()
         {
-            throw new NotImplementedException();
-        }
+            await Navigation.PushAsync(new EntryPage());
 
-        async void OnSaveButtonClicked(object sender, EventArgs e)
-        {
-            var note = (Note)BindingContext;
-
-            if (string.IsNullOrWhiteSpace(note.Filename))
-            {
-                // Save
-                var filename = Path.Combine(App.FolderPath, $"{Path.GetRandomFileName()}.notes.txt");
-                File.WriteAllText(filename, note.Text);
-            }
-            else
-            {
-                // Update
-                File.WriteAllText(note.Filename, note.Text);
-            }
-
-            await Navigation.PopAsync();
-        }
-
-        async void OnDeleteButtonClicked(object sender, EventArgs e)
-        {
-            var note = (Note)BindingContext;
-
-            if (File.Exists(note.Filename))
-            {
-                File.Delete(note.Filename);
-            }
-
-            await Navigation.PopAsync();
         }
     }
 }
