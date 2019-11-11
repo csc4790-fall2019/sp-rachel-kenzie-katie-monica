@@ -69,6 +69,7 @@
     <BundleResource Include="Resources\HoursTest.db.sqbpro" />
     <BundleResource Include="Resources\Resources.db" />
     <Compile Include="SQLiteiPhone.cs" />
+    <BundleResource Include="Resources\HHPhillyDB" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Images.imageset\Contents.json">
