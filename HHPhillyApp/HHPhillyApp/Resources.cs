@@ -22,6 +22,6 @@ namespace HHPhillyApp
         public String Tags {
             get; set;
         }
-
-     }
+        public int ID { get; internal set; }
+    }
  }
