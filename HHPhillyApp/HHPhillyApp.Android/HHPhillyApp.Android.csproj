@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\indieflowerregular.ttf" />
+    <AndroidAsset Include="Assets\HHPhillyDB" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
