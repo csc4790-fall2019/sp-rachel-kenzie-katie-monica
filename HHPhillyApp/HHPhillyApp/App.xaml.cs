@@ -8,6 +8,8 @@ namespace HHPhillyApp
 {
     public partial class App : Application
     {
+        static DatabaseManager db;
+
         public static string FolderPath { get; internal set; }
         public App()
         {
@@ -15,6 +17,18 @@ namespace HHPhillyApp
             FolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
             MainPage = new NavigationPage(new Main());
            // MainPage = new NavigationPage(new NotesPage());
+        }
+
+        public static DatabaseManager Database
+        {
+            get
+            {
+                if (db == null)
+                {
+                    db = new DatabaseManager(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Resources.db"));
+                }
+                return db;
+            }
         }
 
         protected override void OnStart()

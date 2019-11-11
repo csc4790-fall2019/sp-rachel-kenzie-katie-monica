@@ -21,7 +21,7 @@ namespace HHPhillyApp
 
         async void NavigateButton_OnClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ListPage());
+            await Navigation.PushAsync(new EntryPage());
         }
     }
 }
