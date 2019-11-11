@@ -11,13 +11,19 @@ namespace HHPhillyApp
         public EntryPage()
         {
             InitializeComponent();
-            
+            searchResults.ItemsSource = DataService.Fruits;
         }
 
-        async void OnSaveButtonClicked()
+    void OnTextChanged(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new EntryPage());
+            SearchBar searchBar = (SearchBar)sender;
+            searchResults.ItemsSource = DataService.GetSearchResults(searchBar.Text);
+        }
 
+        void OnSearchButtonPressed(object sender, EventArgs e)
+        {
+            SearchBar bar = (SearchBar)sender;
+            searchResults.ItemsSource = DataService.GetSearchResults(bar.Text);
         }
     }
 }

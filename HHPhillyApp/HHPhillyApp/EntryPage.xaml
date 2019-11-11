@@ -3,15 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HHPhillyApp.EntryPage"
              Title= "Resources List">
-    <StackLayout Margin="20">
-        <SearchBar Placeholder="Search for a resource ..."></SearchBar>
-    <ListView x:Name="Resources" IsVisible="True">  
-      <ListView.ItemsSource>
-          <x:Array Type="{x:Type x:String}">
-            <x:String>Test Resource</x:String>
-            <x:String>Test Resource 2</x:String>
-          </x:Array>
-      </ListView.ItemsSource>
-     </ListView>
+    <StackLayout>
+        <SearchBar Placeholder="Search for a resource"
+           PlaceholderColor="Gray"
+           TextColor="Black"
+           TextChanged="OnTextChanged"
+           SearchButtonPressed="OnSearchButtonPressed"/>
+    <ListView x:Name="searchResults" IsVisible="True"
+        HorizontalOptions="Fill"
+        VerticalOptions="CenterAndExpand">
+    </ListView>
   </StackLayout>
 </ContentPage>
