@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <Compile Remove="ListPage.xaml.cs" />
+    <Compile Remove="ListItems.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="EntryPage.xaml.cs">

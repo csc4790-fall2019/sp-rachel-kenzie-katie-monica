@@ -11,6 +11,7 @@ namespace HHPhillyApp
         public EntryPage()
         {
             InitializeComponent();
+            
         }
 
         async void OnSaveButtonClicked()
