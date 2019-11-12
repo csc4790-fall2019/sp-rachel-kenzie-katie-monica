@@ -4,7 +4,7 @@
              x:Class="HHPhillyApp.EntryPage"
              Title= "Resources List">
     <StackLayout>
-        <SearchBar Placeholder="Search for a resource"
+        <SearchBar Placeholder="Search for a resource:"
            PlaceholderColor="Gray"
            TextColor="Black"
            TextChanged="OnTextChanged"
