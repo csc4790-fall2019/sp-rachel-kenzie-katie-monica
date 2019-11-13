@@ -4,14 +4,15 @@
              x:Class="HHPhillyApp.EntryPage"
              Title= "Resources List">
     <StackLayout>
-        <SearchBar Placeholder="Search for a resource:"
+        <SearchBar Placeholder="Search for a resource"
            PlaceholderColor="Gray"
            TextColor="Black"
            TextChanged="OnTextChanged"
            SearchButtonPressed="OnSearchButtonPressed"/>
     <ListView x:Name="searchResults" IsVisible="True"
         HorizontalOptions="Fill"
-        VerticalOptions="CenterAndExpand">
+        VerticalOptions="CenterAndExpand"
+        ItemSelected="OnClicked">
     </ListView>
   </StackLayout>
 </ContentPage>
