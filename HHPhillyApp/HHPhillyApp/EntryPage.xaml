@@ -11,7 +11,8 @@
            SearchButtonPressed="OnSearchButtonPressed"/>
     <ListView x:Name="searchResults" IsVisible="True"
         HorizontalOptions="Fill"
-        VerticalOptions="CenterAndExpand">
+        VerticalOptions="CenterAndExpand"
+         ItemSelected="OnClicked">
     </ListView>
   </StackLayout>
 </ContentPage>
