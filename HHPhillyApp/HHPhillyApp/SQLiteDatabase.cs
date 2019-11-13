@@ -27,5 +27,10 @@ namespace HHPhillyApp
             return dbConnection.Table<Resources>().Where(i => i.ID == id).FirstOrDefaultAsync();
         }
 
+        public Task<List<Resources>> GetItemsAsync()
+        {
+            return dbConnection.QueryAsync<Resources>("Select * From[Resources]");
+        }
+
     }
 }

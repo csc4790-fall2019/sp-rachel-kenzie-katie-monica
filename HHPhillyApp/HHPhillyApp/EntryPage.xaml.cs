@@ -11,10 +11,15 @@ namespace HHPhillyApp
         public EntryPage()
         {
             InitializeComponent();
-            searchResults.ItemsSource = DataService.Fruits;
+            searchResults.ItemsSource = DataService.ResourceNames;
         }
 
-    void OnTextChanged(object sender, EventArgs e)
+        //protected override async void OnAppearing()
+        //{
+            //base.OnAppearing();
+           // searchResults.ItemsSource = await App.Database.GetItemsAsync();
+        //} 
+        void OnTextChanged(object sender, EventArgs e)
         {
             SearchBar searchBar = (SearchBar)sender;
             searchResults.ItemsSource = DataService.GetSearchResults(searchBar.Text);
@@ -25,5 +30,6 @@ namespace HHPhillyApp
             SearchBar bar = (SearchBar)sender;
             searchResults.ItemsSource = DataService.GetSearchResults(bar.Text);
         }
+
     }
 }

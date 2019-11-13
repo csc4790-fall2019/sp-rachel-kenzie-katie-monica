@@ -20,6 +20,10 @@
   <ItemGroup>
     <Compile Remove="ListPage.xaml.cs" />
     <Compile Remove="ListItems.cs" />
+    <Compile Remove="MyPage.xaml.cs" />
+    <Compile Remove="MyPage.cs" />
+    <Compile Remove="EntryPageCS.cs" />
+    <Compile Remove="ResourceDetailsPage.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="EntryPage.xaml.cs">
@@ -35,6 +39,10 @@
 
   <ItemGroup>
     <EmbeddedResource Remove="ListPage.xaml" />
+    <EmbeddedResource Remove="MyPage.xaml" />
+    <EmbeddedResource Remove="MyPage.xaml" />
+    <EmbeddedResource Remove="MyPage.xaml" />
+    <EmbeddedResource Remove="ResourceDetailsPage.xaml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="EntryPage.xaml">
