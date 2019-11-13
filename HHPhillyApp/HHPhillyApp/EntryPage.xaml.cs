@@ -14,6 +14,11 @@ namespace HHPhillyApp
             searchResults.ItemsSource = DataService.ResourceNames;
         }
 
+        //protected override async void OnAppearing()
+        //{
+            //base.OnAppearing();
+           // searchResults.ItemsSource = await App.Database.GetItemsAsync();
+        //} 
         void OnTextChanged(object sender, EventArgs e)
         {
             SearchBar searchBar = (SearchBar)sender;
@@ -24,11 +29,6 @@ namespace HHPhillyApp
         {
             SearchBar bar = (SearchBar)sender;
             searchResults.ItemsSource = DataService.GetSearchResults(bar.Text);
-        }
-
-        void OnClicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new ResourceDetails());
         }
 
     }
