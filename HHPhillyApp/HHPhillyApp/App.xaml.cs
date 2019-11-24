@@ -15,7 +15,7 @@ namespace HHPhillyApp
         {
             InitializeComponent();
             //FolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
-            MainPage = new NavigationPage(new EntryPage());
+            MainPage = new NavigationPage(new Main());
            // MainPage = new NavigationPage(new NotesPage());
         }
 
