@@ -14,6 +14,7 @@ namespace HHPhillyApp.Droid
         {
         }
 
+        #region ISQLite implementation
         public SQLite.Net.SQLiteConnection GetConnection()
         {
             var sqliteFilename = "HHPhillyDB";
@@ -44,6 +45,7 @@ namespace HHPhillyApp.Droid
 
             return conn;
         }
+        #endregion
 
         void ReadWriteStream(Stream readStream, Stream writeStream)
         {
