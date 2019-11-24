@@ -26,6 +26,15 @@ namespace HHPhillyApp.Droid
 
             if (!File.Exists(path))
             {
+                //var s = Forms.Context.Resources.OpenRawResource(Resource.Raw.APGameDb);
+                var s = Forms.Context.Assets.Open(sqliteFilename);  // RESOURCE NAME ###
+
+                // create a write stream
+                FileStream writeStream = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write);
+                // write to the stream
+                ReadWriteStream(s, writeStream);
+            }
+            /*{
                 using (var binaryReader = new BinaryReader(Android.App.Application.Context.Assets.Open(sqliteFilename)))
                 {
                     using (var binaryWriter = new BinaryWriter(new FileStream(path, FileMode.Create)))
@@ -38,7 +47,7 @@ namespace HHPhillyApp.Droid
                         }
                     }
                 }
-            }
+            }*/
 
             var plat = new SQLite.Net.Platform.XamarinAndroid.SQLitePlatformAndroid();
             var conn = new SQLite.Net.SQLiteConnection(plat, path);
