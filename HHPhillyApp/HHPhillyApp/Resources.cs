@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite.Net.Attributes;
+using System;
 using System.Collections.Generic;
 
 namespace HHPhillyApp
@@ -24,6 +25,11 @@ namespace HHPhillyApp
         public String Tags {
             get; set;
         }
-        public int ID { get; internal set; }
+        //public int ID { get; internal set; }
+
+//        public override string ToString()
+        //{
+          //  return Name;
+       // }
     }
  }

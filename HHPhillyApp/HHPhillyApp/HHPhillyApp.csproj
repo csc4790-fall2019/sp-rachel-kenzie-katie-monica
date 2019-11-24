@@ -10,7 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
     <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
     <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
@@ -22,8 +21,10 @@
     <Compile Remove="ListItems.cs" />
     <Compile Remove="MyPage.xaml.cs" />
     <Compile Remove="MyPage.cs" />
-    <Compile Remove="EntryPageCS.cs" />
     <Compile Remove="ResourceDetailsPage.xaml.cs" />
+    <Compile Remove="EntryPageCS.cs" />
+    <Compile Remove="EntryPageCS.cs" />
+    <Compile Remove="DatabaseManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="EntryPage.xaml.cs">

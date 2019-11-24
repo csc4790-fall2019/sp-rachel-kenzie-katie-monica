@@ -3,25 +3,26 @@ using SQLite.Net;
 using System.Collections.Generic;
 using Xamarin.Forms;
 using HHPhillyApp;
+using SQLite;
 using System.Threading.Tasks;
 using System.Linq;
 
 namespace HHPhillyApp
 {
-    public class SQLiteDatabase
+    public class DatabaseManager
     {
-        SQLiteConnection dbConn;
-        public SQLiteDatabase()
+        SQLite.Net.SQLiteConnection dbConnection;
+
+        public DatabaseManager()
         {
-            dbConn = DependencyService.Get<ISQLite>().GetConnection();
-            dbConn.CreateTable<Resources>();
+            dbConnection = DependencyService.Get<IDBInterface>().GetConnection();
             // dbConnection = new SQLiteAsyncConnection(dbPath);
             //dbConnection.CreateTableAsync<Resources>().Wait();
         }
 
         public List<Resources> GetAllResources()
         {
-            return dbConn.Query<Resources>("Select * From [Resources]");
+            return dbConnection.Query<Resources>("Select * From [Resources]");
         }
 
         /* public Task<List<Resources>> GetItems()

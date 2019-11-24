@@ -7,14 +7,15 @@ namespace HHPhillyApp
     {
         public static List<string> ResourceNames { get; } = new List<string>
         {
-            "OHS Apple Tree Family Center",
-            "Red Shield Family Residence",
-            "Gaudenzia's House of Passage - Kirkbride Center",
-            "Roosevelt Darby Center",
-            "Station House",
-            "Sunday Breakfast Rescue Mission"
+            "Food Services",
+            "Healthcare Resources",
+            "LGBTQ+ Resources",
+            "Men's Resources",
+            "Veteran Resources",
+            "Women's Resources",
+            "Youth Resources"
         };
-
+           
         public static List<string> GetSearchResults(string queryString)
         {
             var normalizedQuery = queryString?.ToLower() ?? "";

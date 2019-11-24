@@ -16,7 +16,6 @@ namespace HHPhillyApp
         public Main()
         {
             InitializeComponent();
-
         }
 
         async void NavigateButton_OnClicked(object sender, EventArgs e)

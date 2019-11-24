@@ -1,20 +1,28 @@
 ﻿using System;
+using HHPhillyApp.Droid;
 using System.IO;
+using SQLite.Net;
+using Xamarin.Forms;
+
+[assembly: Dependency(typeof(SQLiteAndroid))]
 
 namespace HHPhillyApp.Droid
-{
-    public class SQLiteAndriod : IDBInterface
+     {
+    public class SQLiteAndroid : ISQLite
     {
-        public SQLiteAndriod()
+        public SQLiteAndroid()
         {
         }
 
-        public SQLite.Net.SQLiteConnection CreateConnection() {
+        public SQLite.Net.SQLiteConnection GetConnection()
+        {
             var sqliteFilename = "Resources.db";
-            string documentsDirectoryPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            var path = Path.Combine(documentsDirectoryPath, sqliteFilename);
+            string documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            var path = Path.Combine(documentsPath, sqliteFilename);
 
-            // This is where we copy in our pre-created database
+            // This is where we copy in the prepopulated database
+            Console.WriteLine(path);
+
             if (!File.Exists(path))
             {
                 using (var binaryReader = new BinaryReader(Android.App.Application.Context.Assets.Open(sqliteFilename)))
@@ -30,6 +38,7 @@ namespace HHPhillyApp.Droid
                     }
                 }
             }
+
             var plat = new SQLite.Net.Platform.XamarinAndroid.SQLitePlatformAndroid();
             var conn = new SQLite.Net.SQLiteConnection(plat, path);
 

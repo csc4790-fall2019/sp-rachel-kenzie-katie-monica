@@ -1,10 +1,9 @@
-﻿using System;
-using SQLite.Net;
+﻿using SQLite.Net;
 
 namespace HHPhillyApp
 {
-    public interface IDBInterface
+    public interface ISQLite
     {
-        SQLiteConnection CreateConnection();
+        SQLiteConnection GetConnection();
     }
 }

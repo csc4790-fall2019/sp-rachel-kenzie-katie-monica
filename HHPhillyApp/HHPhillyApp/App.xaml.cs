@@ -8,26 +8,26 @@ namespace HHPhillyApp
 {
     public partial class App : Application
     {
-        static DatabaseManager db;
+        static SQLiteDatabase dbUtils;
 
         public static string FolderPath { get; internal set; }
         public App()
         {
             InitializeComponent();
-            FolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
-            MainPage = new NavigationPage(new Main());
+            //FolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
+            MainPage = new NavigationPage(new EntryPage());
            // MainPage = new NavigationPage(new NotesPage());
         }
 
-        public static DatabaseManager Database
+        public static SQLiteDatabase Database
         {
             get
             {
-                if (db == null)
+                if (dbUtils == null)
                 {
-                    db = new DatabaseManager(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Resources.db"));
+                    dbUtils = new SQLiteDatabase();
                 }
-                return db;
+                return dbUtils;
             }
         }
 

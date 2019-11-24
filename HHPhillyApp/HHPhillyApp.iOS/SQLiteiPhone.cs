@@ -1,39 +1,39 @@
 ﻿using System;
 using System.IO;
-using Foundation;
+using SQLite.Net;
+using Xamarin.Forms;
+using HHPhillyApp.iOS;
 
+[assembly: Dependency(typeof(SQLiteiPhone))]
 namespace HHPhillyApp.iOS
 {
-    public class SQLiteiPhone : IDBInterface
+    public class SQLiteiPhone : ISQLite
     {
         public SQLiteiPhone()
         {
         }
-        public SQLite.Net.SQLiteConnection CreateConnection()
+        #region ISQLite implementation
+        public SQLite.Net.SQLiteConnection GetConnection()
         {
-            var sqliteFilename = "Resources.db";
+            var sqliteFilename = "HHPhillyDB";
 
-            string docFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            string libFolder = Path.Combine(docFolder, "..", "Library", "Databases");
+            string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            string libraryPath = Path.Combine(documentsPath, "..", "Library");
 
-            if (!Directory.Exists(libFolder))
-            {
-                Directory.CreateDirectory(libFolder);
-            }
-            string path = Path.Combine(libFolder, sqliteFilename);
+            var path = Path.Combine(libraryPath, sqliteFilename);
 
-            // This is where we copy in the pre-created database
+            Console.WriteLine(path);
             if (!File.Exists(path))
             {
-                var existingDb = NSBundle.MainBundle.PathForResource("Resources", "db");
-                File.Copy(existingDb, path);
+                File.Copy(sqliteFilename, path);
             }
 
-            var iOSPlatform = new SQLite.Net.Platform.XamarinIOS.SQLitePlatformIOS();
-            var connection = new SQLite.Net.SQLiteConnection(iOSPlatform, path);
+            var plat = new SQLite.Net.Platform.XamarinIOS.SQLitePlatformIOS();
+            var conn = new SQLite.Net.SQLiteConnection(plat, path);
 
             // Return the database connection 
-            return connection;
+            return conn;
         }
+        #endregion
     }
 }
