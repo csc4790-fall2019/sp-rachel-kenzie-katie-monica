@@ -3,16 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HHPhillyApp.EntryPage"
              Title= "Resources List">
-    <StackLayout>
-        <SearchBar Placeholder="Search for a resource"
-           PlaceholderColor="Gray"
-           TextColor="Black"
-           TextChanged="OnTextChanged"
-           SearchButtonPressed="OnSearchButtonPressed"/>
-    <ListView x:Name="searchResults" IsVisible="True"
-        HorizontalOptions="Fill"
-        VerticalOptions="CenterAndExpand"
-        ItemSelected="OnClicked">
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+  </ContentPage.Padding>
+  <ContentPage.Content>
+    <ListView x:Name="lstData" HasUnevenRows="false" Header="Header Value" ItemSelected="OnClicked" >
+      <ListView.HeaderTemplate>
+        <DataTemplate>
+          <StackLayout Orientation="Horizontal" BackgroundColor="Blue" Padding="5,5,5,5">
+            <Label Text="Name" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+          </StackLayout>       
+        </DataTemplate>
+      </ListView.HeaderTemplate>
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout Orientation="Horizontal" Padding="5,5,5,5">
+              <Label Text="{Binding Name}" FontSize="Medium" />
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
     </ListView>
-  </StackLayout>
+  </ContentPage.Content>
 </ContentPage>
