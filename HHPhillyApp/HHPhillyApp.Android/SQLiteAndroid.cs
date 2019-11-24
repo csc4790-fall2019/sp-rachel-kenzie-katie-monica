@@ -15,15 +15,28 @@ namespace HHPhillyApp.Droid
         }
 
         #region ISQLite implementation
+        [Obsolete]
         public SQLite.Net.SQLiteConnection GetConnection()
         {
-            var sqliteFilename = "HHPHillyDB";
-            string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal); // Documents folder
+            var sqliteFilename = "HHPhillyDB";
+            string documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal); // Documents folder
             var path = Path.Combine(documentsPath, sqliteFilename);
+
+            // This is where we copy in the prepopulated database
             Console.WriteLine(path);
-            if (!File.Exists(path)) File.Create(path);
+            if (!File.Exists(path))
+            {
+                var s = Forms.Context.Assets.Open(sqliteFilename);  // RESOURCE NAME ###
+
+                // create a write stream
+                FileStream writeStream = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write);
+                // write to the stream
+                ReadWriteStream(s, writeStream);
+            }
+
             var plat = new SQLite.Net.Platform.XamarinAndroid.SQLitePlatformAndroid();
             var conn = new SQLite.Net.SQLiteConnection(plat, path);
+
             // Return the database connection 
             return conn;
         }
