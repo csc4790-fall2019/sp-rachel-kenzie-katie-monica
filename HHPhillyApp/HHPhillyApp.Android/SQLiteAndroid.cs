@@ -16,7 +16,7 @@ namespace HHPhillyApp.Droid
 
         public SQLite.Net.SQLiteConnection GetConnection()
         {
-            var sqliteFilename = "Resources.db";
+            var sqliteFilename = "HHPhillyDB";
             string documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             var path = Path.Combine(documentsPath, sqliteFilename);
 
