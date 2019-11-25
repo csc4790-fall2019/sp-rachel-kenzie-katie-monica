@@ -23,7 +23,7 @@ namespace HHPhillyApp
         void OnTextChanged(object sender, EventArgs e)
         {
             SearchBar searchBar = (SearchBar)sender;
-            lstData.ItemsSource = DataService.GetSearchResults(searchBar.Text);
+           // lstData.ItemsSource = DataService.GetSearchResults(searchBar.Text);
             //searchResults.ItemsSource = getSearchResults(searchBar.Text);
            // searchResults.ItemsSource = DataService.GetSearchResults(searchBar.Text);
             //searchResults.ItemsSource = DataService.GetSearchResults(searchBar.Text);
@@ -44,5 +44,6 @@ namespace HHPhillyApp
             var vSelUser = (Resources)e.SelectedItem;
             Navigation.PushAsync(new ResourceDetails(vSelUser));
         }
-	}
+
+    }
 }

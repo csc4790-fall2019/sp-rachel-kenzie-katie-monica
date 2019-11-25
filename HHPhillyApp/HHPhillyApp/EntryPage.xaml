@@ -6,13 +6,17 @@
   <ContentPage.Padding>
     <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
   </ContentPage.Padding>
-  <ContentPage.Content>
     <ListView x:Name="lstData" HasUnevenRows="false" Header="Header Value" ItemSelected="OnClicked" >
         <ListView.HeaderTemplate>
         <DataTemplate>
           <StackLayout Orientation="Horizontal" Padding="5,5,5,5">
-              <SearchBar Placeholder="Search..." ></SearchBar>  
-              <Label Text="Name" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+          <Picker Title="Resource Categories" FontAttributes="Bold" >
+              <Picker.Items>
+                 <x:String> All Resources</x:String>
+                 <x:String> Women</x:String>
+                 <x:String> Men</x:String>
+              </Picker.Items>  
+          </Picker>
           </StackLayout>       
         </DataTemplate>
       </ListView.HeaderTemplate>
@@ -20,11 +24,10 @@
         <DataTemplate>
           <ViewCell>
             <StackLayout Orientation="Horizontal" Padding="5,5,5,5">
-              <Label Text="{Binding Name}" FontSize="Medium" />
+                <Label Text="{Binding Name}" FontSize="Medium" />
             </StackLayout>
           </ViewCell>
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>
-  </ContentPage.Content>
 </ContentPage>

@@ -59,9 +59,35 @@ namespace HHPhillyApp
             return dbConn.Query<Resources>("Select * From [ResourceTags] WHERE TagNames LIKE '%STI Testing%'");
         }
 
-        public List<Resources> GetAllDomesticViolence()
+        public List<Resources> GetAllFamilies()
         {
-            return dbConn.Query<Resources>("Select * From [ResourceTags] WHERE TagNames LIKE '%Domestic Violence%'");
+            return dbConn.Query<Resources>("Select * From [ResourceTags] WHERE TagNames LIKE '%Families%'");
+        }
+        public List<Resources> GetAllHaircuts()
+        {
+            return dbConn.Query<Resources>("Select * From [ResourceTags] WHERE TagNames LIKE '%Haircuts%'");
+        }
+        public List<Resources> GetAllBenefitsAccess()
+        {
+            return dbConn.Query<Resources>("Select * From [ResourceTags] WHERE TagNames LIKE '%BenefitsAccess%'");
+        }
+        public List<Resources> GetAllClothing()
+        {
+            return dbConn.Query<Resources>("Select * From [ResourceTags] WHERE TagNames LIKE '%Clothing%'");
+        }
+        public List<Resources> GetAllCounseling()
+        {
+            return dbConn.Query<Resources>("Select * From [ResourceTags] WHERE TagNames LIKE '%Counseling%'");
+        }
+
+        public List<Resources> GetAllHealthServices()
+        {
+            return dbConn.Query<Resources>("Select * From [ResourceTags] WHERE TagNames LIKE '%Health Services%'");
+        }
+
+        public List<Resources> GetAllDropIn()
+        {
+            return dbConn.Query<Resources>("Select * From [ResourceTags] WHERE TagNames LIKE '%Drop-in Center%'");
         }
     }
 }
