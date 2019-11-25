@@ -24,30 +24,44 @@ namespace HHPhillyApp
             return dbConn.Query<Resources>("Select * From [Resources]");
         }
 
-        /* public Task<List<Resources>> GetItems()
-         {
-             return dbConnection.QueryAsync<Resources>("Select * From[Resources]");
-         }
+        public List<Resources> GetAllLegalServices()
+        {
+            return dbConn.Query<Resources>("Select * From [ResourceTags] WHERE TagNames LIKE '%Legal Services%'");
+        }
 
-         public Task<Resources> GetItemAsync(int id)
-         {
-             return dbConnection.Table<Resources>().Where(i => i.ID == id).FirstOrDefaultAsync();
-         }
+        public List<Resources> GetAllMen()
+        {
+            return dbConn.Query<Resources>("Select * From [ResourceTags] WHERE TagNames LIKE '%Men%'");
+        }
 
-         public Task<List<Resources>> GetItemsAsync()
-         {
-             return dbConnection.QueryAsync<Resources>("Select * From[Resources]");
-         }
+        public List<Resources> GetAllWomen()
+        {
+            return dbConn.Query<Resources>("Select * From [ResourceTags] WHERE TagNames LIKE '%Women%'");
+        }
 
-         public static List<Resources> testing(string dbpath) {
-             List<Resources> testing2 = new List<Resources>();
+        public List<Resources> GetAllShelter()
+        {
+            return dbConn.Query<Resources>("Select * From [ResourceTags] WHERE TagNames LIKE '%Shelter%'");
+        }
 
-             using (var conn = new SQLite.SQLiteConnection(dbpath)) {
-                 testing2 = conn.Table<Resources>().ToList();
-             }
+        public List<Resources> GetAllLGBTQ()
+        {
+            return dbConn.Query<Resources>("Select * From [ResourceTags] WHERE TagNames LIKE '%LGBTQ%'");
+        }
 
-             return testing2;
-         } */
+        public List<Resources> GetAllYouthServices()
+        {
+            return dbConn.Query<Resources>("Select * From [ResourceTags] WHERE TagNames LIKE '%Youth Services%'");
+        }
 
+        public List<Resources> GetAllSTITesting()
+        {
+            return dbConn.Query<Resources>("Select * From [ResourceTags] WHERE TagNames LIKE '%STI Testing%'");
+        }
+
+        public List<Resources> GetAllDomesticViolence()
+        {
+            return dbConn.Query<Resources>("Select * From [ResourceTags] WHERE TagNames LIKE '%Domestic Violence%'");
+        }
     }
 }

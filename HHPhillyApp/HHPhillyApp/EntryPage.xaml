@@ -8,10 +8,11 @@
   </ContentPage.Padding>
   <ContentPage.Content>
     <ListView x:Name="lstData" HasUnevenRows="false" Header="Header Value" ItemSelected="OnClicked" >
-      <ListView.HeaderTemplate>
+        <ListView.HeaderTemplate>
         <DataTemplate>
-          <StackLayout Orientation="Horizontal" BackgroundColor="Blue" Padding="5,5,5,5">
-            <Label Text="Name" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+          <StackLayout Orientation="Horizontal" Padding="5,5,5,5">
+              <SearchBar Placeholder="Search..." ></SearchBar>  
+              <Label Text="Name" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
           </StackLayout>       
         </DataTemplate>
       </ListView.HeaderTemplate>

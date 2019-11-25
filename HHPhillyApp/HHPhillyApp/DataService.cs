@@ -13,7 +13,7 @@ namespace HHPhillyApp
             "Men's Resources",
             "Veteran Resources",
             "Women's Resources",
-            "Youth Resources"
+            "Youth Resources" 
         };
            
         public static List<string> GetSearchResults(string queryString)

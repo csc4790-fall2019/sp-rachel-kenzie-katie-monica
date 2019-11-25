@@ -10,26 +10,32 @@ namespace HHPhillyApp
             get; set;
         }
 
-       public String Address {
+       public String Transportation {
             get; set;
         }
 
-        public String Hours {
+        public String Neighborhood {
             get; set;
         }
 
-        public String Phonenumber {
+        public String Address {
             get; set;
         }
 
-        public String Tags {
+        public String Payment {
             get; set;
         }
+
+        public String MonHours
+        {
+            get; set;
+        }
+
         //public int ID { get; internal set; }
 
-//        public override string ToString()
+        //        public override string ToString()
         //{
-          //  return Name;
-       // }
+        //  return Name;
+        // }
     }
  }

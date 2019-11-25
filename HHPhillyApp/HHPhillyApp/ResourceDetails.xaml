@@ -2,12 +2,32 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HHPhillyApp.ResourceDetails">
     <ContentPage.Content>
     <StackLayout Margin="20" VerticalOptions="StartAndExpand">
-		<Label Text="Name"/>
-		<Entry Text="Address" />
-        <Entry Text="Hours:" />
-        <Entry Text="Phone Number:" />
-        <Entry Text="Relevant Tags:"/>
-        <Entry Text="Comments:"/>
+		 <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="10"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="10"/>
+      </Grid.ColumnDefinitions>
+
+      <Label Grid.Row ="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Resources Details" />
+      <Label Grid.Row ="1" Grid.Column="1" Text="Name" />
+      <Label Grid.Row="1" Grid.Column="2" Text ="{Binding Name}" />
+      <Label Grid.Row ="2" Grid.Column="1" Text="Address" />
+      <Label Grid.Row="2" Grid.Column="2" Text ="{Binding Address}"/>
+      <Label Grid.Row ="3" Grid.Column="1" Text="Hours" />
+      <Label Grid.Row="3" Grid.Column="2" Text ="{Binding MonHours}"/>
+    </Grid>
 		<Button Text="Cancel" Clicked="OnCancelClicked" />
 	</StackLayout>
     </ContentPage.Content>

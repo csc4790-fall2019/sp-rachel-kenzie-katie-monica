@@ -16,24 +16,33 @@ namespace HHPhillyApp
             InitializeComponent();
             var vList = App.Database.GetAllResources();
             lstData.ItemsSource = vList;
-            //searchResults.ItemsSource = DataService.ResourceNames
+            //searchResults.ItemsSource = vList;
+           // searchResults.ItemsSource = DataService.ResourceNames
         }
 
         void OnTextChanged(object sender, EventArgs e)
         {
             SearchBar searchBar = (SearchBar)sender;
+            lstData.ItemsSource = DataService.GetSearchResults(searchBar.Text);
+            //searchResults.ItemsSource = getSearchResults(searchBar.Text);
            // searchResults.ItemsSource = DataService.GetSearchResults(searchBar.Text);
+            //searchResults.ItemsSource = DataService.GetSearchResults(searchBar.Text);
         }
 
         void OnSearchButtonPressed(object sender, EventArgs e)
         {
             SearchBar bar = (SearchBar)sender;
-           // searchResults.ItemsSource = DataService.GetSearchResults(bar.Text);
+            //lstData.ItemsSource = DataService.GetSearchResults(bar.Text);
         }
 
-		void OnClicked(object sender, ItemTappedEventArgs e)
+		void OnClicked(object sender, SelectedItemChangedEventArgs e)
 		{
-            Navigation.PushAsync(new ResourceDetails());
-		}
+            if (e.SelectedItem == null)
+            {
+                return;
+            }
+            var vSelUser = (Resources)e.SelectedItem;
+            Navigation.PushAsync(new ResourceDetails(vSelUser));
+        }
 	}
 }
