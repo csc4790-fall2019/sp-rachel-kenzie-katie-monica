@@ -23,7 +23,7 @@
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
-            <StackLayout Orientation="Horizontal" Padding="5,5,5,5">
+            <StackLayout Orientation="Horizontal" Padding="5,5,5,5" >
                 <Label Text="{Binding Name}" FontSize="Medium" />
             </StackLayout>
           </ViewCell>

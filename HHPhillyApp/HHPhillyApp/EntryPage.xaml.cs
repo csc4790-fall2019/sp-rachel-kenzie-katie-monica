@@ -6,6 +6,7 @@ using Xamarin.Forms;
 using SQLite;
 using System.Linq;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace HHPhillyApp
 {
@@ -17,7 +18,7 @@ namespace HHPhillyApp
             var vList = App.Database.GetAllResources();
             lstData.ItemsSource = vList;
             //searchResults.ItemsSource = vList;
-           // searchResults.ItemsSource = DataService.ResourceNames
+            // searchResults.ItemsSource = DataService.ResourceNames
         }
 
         void OnTextChanged(object sender, EventArgs e)

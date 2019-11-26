@@ -82,6 +82,7 @@
     <AndroidAsset Include="Assets\HoursTest.db.sqbpro" />
     <None Include="Resources\Resources.db" />
     <None Include="Resources\HHPhillyDB" />
+    <None Include="Resources\HHPhillyDBFinal" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Tabbar.xml" />

@@ -15,7 +15,7 @@ namespace HHPhillyApp.iOS
         #region ISQLite implementation
         public SQLite.Net.SQLiteConnection GetConnection()
         {
-            var sqliteFilename = "HHPhillyDB";
+            var sqliteFilename = "HHPhillyDBFinal";
 
             string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             string libraryPath = Path.Combine(documentsPath, "..", "Library");
