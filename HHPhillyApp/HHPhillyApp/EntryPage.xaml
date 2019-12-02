@@ -15,6 +15,31 @@
                  <x:String> All Resources</x:String>
                  <x:String> Men</x:String>
                  <x:String> Women</x:String>
+                 <x:String> Families</x:String>
+                 <x:String> LGBTQ+</x:String>
+                 <x:String> Veterans</x:String>
+                 <x:String> Youth Services</x:String>
+                 <x:String> Art</x:String>
+                 <x:String> Benefits Access</x:String>
+                 <x:String> Clothes</x:String>
+                 <x:String> Counseling </x:String>
+                 <x:String> Drop-in</x:String>
+                 <x:String> Domestic Violence</x:String>
+                 <x:String> Education Services</x:String>
+                 <x:String> Emergency</x:String>
+                 <x:String> Haircuts</x:String>
+                 <x:String> Health Services </x:String>
+                 <x:String> HIV Testing</x:String>
+                 <x:String> Meals</x:String>
+                 <x:String> Mental Health Support</x:String>
+                 <x:String> Non-Emergency</x:String>
+                 <x:String> Personal Care Items</x:String>
+                 <x:String> Recovery Resources</x:String>
+                 <x:String> Shelter</x:String>
+                 <x:String> Showers</x:String>
+                 <x:String> STI Testing</x:String>
+                 <x:String> Support Groups</x:String>
+                 <x:String> Syringe Exchange</x:String>
               </Picker.Items>
           </Picker>
           </StackLayout>       
