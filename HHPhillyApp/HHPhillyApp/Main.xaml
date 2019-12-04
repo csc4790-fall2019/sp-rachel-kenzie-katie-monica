@@ -7,24 +7,41 @@
              mc:Ignorable="d"
              x:Class="HHPhillyApp.Main">
 
-    <StackLayout >
+    <!--<StackLayout >-->
+    <RelativeLayout>
 
-        <Image x:Name="backgroundimg"
-               />
+        <!--<Image x:Name="backgroundimg"
+               />-->
+        <Image Source="lovephilly.jpg" Opacity="0.9"
+                RelativeLayout.WidthConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                RelativeLayout.HeightConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
+        <Grid RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}">
+        </Grid>
+
         <Label
             x:Name="title"
             Text="HHPhilly"
             VerticalOptions="Center"
-            Margin="10, 0, 0, 20"
             FontSize="Header"
             FontAttributes="Bold"
             TextColor="White"
             HorizontalOptions="Center"
+            Margin="10, 0, 0, 20"
             />
+
         <Button 
             Text="Go!"
             Clicked="NavigateButton_OnClicked" 
             VerticalOptions="End"
-            Margin="0, 20, 0, 0"/>
-    </StackLayout>
+            Margin="0, 20, 0, 0"
+            HorizontalOptions="Center"
+            />
+
+    </RelativeLayout>
+    <!--</StackLayout>-->
 </ContentPage>
