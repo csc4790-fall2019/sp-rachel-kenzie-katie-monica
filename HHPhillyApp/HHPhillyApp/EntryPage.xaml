@@ -10,7 +10,7 @@
         <ListView.HeaderTemplate>
         <DataTemplate>
           <StackLayout Orientation="Horizontal" Padding="5,5,5,5">
-          <Picker x:Name="picker" Title="Resource Categories" SelectedIndexChanged="OnPickerSelectedIndexChanged">
+          <Picker x:Name="picker" Title="Resource Categories" SelectedIndexChanged="OnPickerSelectedIndexChanged" FontAttributes="Bold">
               <Picker.Items>
                  <x:String> All Resources</x:String>
                  <x:String> Men</x:String>
@@ -41,6 +41,7 @@
                  <x:String> Support Groups</x:String>
                  <x:String> Syringe Exchange</x:String>
               </Picker.Items>
+              <Picker.SelectedIndex>0</Picker.SelectedIndex>
           </Picker>
           </StackLayout>       
         </DataTemplate>

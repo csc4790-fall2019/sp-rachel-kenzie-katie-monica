@@ -18,6 +18,11 @@ namespace HHPhillyApp
             get; set;
         }
 
+        public String PhoneNumber
+        {
+            get; set;
+        }
+
         public String Address {
             get; set;
         }
