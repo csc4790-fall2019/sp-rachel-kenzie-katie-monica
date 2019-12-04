@@ -19,26 +19,29 @@ namespace HHPhillyApp.Droid
         public SQLite.Net.SQLiteConnection GetConnection()
         {
             var sqliteFilename = "HHPhillyDB";
-            string documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal); // Documents folder
-            var path = Path.Combine(documentsPath, sqliteFilename);
+            string documentsDirectoryPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            var path = Path.Combine(documentsDirectoryPath, sqliteFilename);
 
-            // This is where we copy in the prepopulated database
-            Console.WriteLine(path);
+            // This is where we copy in our pre-created database
             if (!File.Exists(path))
             {
-
-                var s = Forms.Context.Assets.Open(sqliteFilename);  // RESOURCE NAME ###
-
-                // create a write stream
-                FileStream writeStream = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write);
-                // write to the stream
-                ReadWriteStream(s, writeStream);
+                using (var binaryReader = new BinaryReader(Android.App.Application.Context.Assets.Open(sqliteFilename)))
+                //using (var binaryReader = new BinaryReader(Android.App.Application.Context.Resources.OpenRawResource(sqliteFilename)))
+                {
+                    using (var binaryWriter = new BinaryWriter(new FileStream(path, FileMode.Create)))
+                    {
+                        byte[] buffer = new byte[2048];
+                        int length = 0;
+                        while ((length = binaryReader.Read(buffer, 0, buffer.Length)) > 0)
+                        {
+                            binaryWriter.Write(buffer, 0, length);
+                        }
+                    }
+                }
             }
-
             var plat = new SQLite.Net.Platform.XamarinAndroid.SQLitePlatformAndroid();
-            var conn = new SQLite.Net.SQLiteConnection(plat, path);
+            var conn = new SQLite.Net.SQLiteConnection(plat, path, false);
 
-            // Return the database connection 
             return conn;
         }
         #endregion

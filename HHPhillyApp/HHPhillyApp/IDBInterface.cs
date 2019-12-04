@@ -4,6 +4,7 @@ namespace HHPhillyApp
 {
     public interface ISQLite
     {
-        SQLiteConnection GetConnection();
+        SQLite.Net.SQLiteConnection GetConnection();
+       
     }
 }
