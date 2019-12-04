@@ -66,10 +66,10 @@
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <BundleResource Include="Resources\indieflowerregular.ttf" />
-    <BundleResource Include="Resources\HoursTest.db.sqbpro" />
     <BundleResource Include="Resources\Resources.db" />
     <Compile Include="SQLiteiPhone.cs" />
     <BundleResource Include="Resources\HHPhillyDB" />
+    <BundleResource Include="Resources\HHPhillyDBFinal" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Images.imageset\Contents.json">
